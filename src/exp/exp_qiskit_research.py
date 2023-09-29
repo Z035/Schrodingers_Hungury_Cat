@@ -14,7 +14,6 @@ from qiskit.algorithms.optimizers import COBYLA
 from qiskit.algorithms.minimum_eigensolvers import SamplingVQE
 from qiskit.primitives import Sampler
 
-
 counts = []
 values = []
 
@@ -27,7 +26,7 @@ def store_intermediate_result(eval_count, parameters, mean, std):
 def main():
     # Initializing Peptide Chain
     algorithm_globals.random_seed = 23
-    main_chain = "DHHQVYQ"
+    main_chain = "IMVAEAR"
     side_chains = [""] * 7
 
     # Defining interactions & penalty
@@ -44,7 +43,7 @@ def main():
 
     print(qubit_op)
 
-    optimizer = COBYLA(maxiter=50)
+    optimizer = COBYLA(maxiter=5)
     # set variational ansatz
     ansatz = RealAmplitudes(reps=1)
 

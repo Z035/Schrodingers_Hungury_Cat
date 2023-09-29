@@ -12,9 +12,6 @@ from qiskit.utils import algorithm_globals
 from qiskit.circuit.library import RealAmplitudes
 from qiskit.algorithms.optimizers import COBYLA
 from qiskit.algorithms.minimum_eigensolvers import SamplingVQE
-from qiskit.primitives import Sampler
-
-
 counts = []
 values = []
 
@@ -50,7 +47,6 @@ def main():
 
     # initialize VQE
     vqe = SamplingVQE(
-        Sampler(),
         ansatz=ansatz,
         optimizer=optimizer,
         aggregation=0.1,
